@@ -1,0 +1,73 @@
+images<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<style>
+
+
+	    @media screen and (max-width:600px){
+	      body{
+	        width: 200% !important;
+	        max-width: 200% !important;
+	      }
+	    }
+
+
+	a{
+		text-decoration: none;
+	}
+
+	body{
+		background:#808080;
+	}
+	h1{
+		text-align:center;
+	}
+	</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TinySlider - JavaScript Slideshow</title>
+<link rel="stylesheet" type="text/css" href="styless.css" />
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+
+	  <a href="index.html"><h1><span style="color:white"><span style="background:red">[MAIN]</span></span></h1></a>
+
+<div id="wrapper">
+	<div>
+		<div class="sliderbutton"><img src="left.gif" width="32" height="38" alt="Previous" onclick="slideshow.move(-1)" /></div>
+		<div id="slider">
+			<ul>
+				<li id="content">
+					<h1>Best Cover Video</h1>
+					<hr>
+					<p>1.6개 국어ver. 뜨거운안녕 (Feat.스텔라장)</p><hr>
+					<p>2.플라워 댄스(Flower Dance) - DJ Okawari | 피아노 커버</p><hr>
+					<p>3.혜민쌤의 스트럼스타일 홍민정의 [아마도 그건(과속스캔들OST)]</p><hr>
+
+				<li><a href="https://www.youtube.com/watch?v=r105B3H30ZQ"><img src="스텔라장.jpg" width="500" height="300" alt="스텔라장" /></a></li>
+				<li><a href="https://www.youtube.com/watch?v=rA_2B7Yj4QE"><img src="피아노.jpg" width="500" height="300" alt="피아노" /></a></li>
+				<li><a href="https://www.youtube.com/watch?v=wU4OPK6pVj0"><img src="기타.jpg" width="500" height="300" alt="기타" /></a></li>
+			</ul>
+		</div>
+		<div class="sliderbutton"><img src="right.gif" width="32" height="38" alt="Next" onclick="slideshow.move(1)" /></div>
+	</div>
+	<ul id="pagination" class="pagination">
+		<li onclick="slideshow.pos(0)">1</li>
+		<li onclick="slideshow.pos(1)">2</li>
+		<li onclick="slideshow.pos(2)">3</li>
+		<li onclick="slideshow.pos(3)">4</li>
+	</ul>
+</div>
+<script type="text/javascript">
+var slideshow=new TINY.slider.slide('slideshow',{
+	id:'slider',
+	auto:3,
+	resume:true,
+	vertical:false,
+	navid:'pagination',
+	activeclass:'current',
+	position:0
+});
+</script>
+</body>
+</html>
